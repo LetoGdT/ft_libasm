@@ -1,6 +1,8 @@
 NAME		:=	libasm.a
 TEST 		:=  test
-SRCS		:=	srcs/ft_strlen.s
+SRCS		:=	srcs/ft_strlen.s\
+				srcs/ft_strcpy.s\
+				srcs/ft_strcmp.s
 HEADERS 	:= 	libasm.h
 TEST_SRCS 	:=  main.c
 OBJS		:=	$(addprefix objs/,$(notdir $(patsubst %.s,%.o,$(SRCS))))
@@ -24,8 +26,7 @@ $(NAME):		$(OBJS)
 
 objs/%.o:		srcs/%.s
 				@mkdir -p objs
-				@echo "Compiling $<"
-				@$(ASM) $(AFLAGS) $< -o $@
+				$(ASM) $(AFLAGS) $< -o $@
 
 objs/%.o:		%.c $(HEADERS)
 				@mkdir -p objs

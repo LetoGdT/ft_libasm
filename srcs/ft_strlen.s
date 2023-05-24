@@ -6,11 +6,11 @@ ft_strlen:
 	push rbp
 	mov rbp, rsp;on crée une nouvelle stack frame
 	mov rax, -1
-_ft_strlen_loop:
+_loop:
 	inc rax
 	mov cl, [rdi + rax]
 	cmp cl, 0
-	jne _ft_strlen_loop
-_ft_strlen_finish:
+	jne _loop
+_finish:
 	pop rbp
 	ret
