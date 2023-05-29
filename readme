@@ -7,3 +7,6 @@ https://wiki.osdev.org/System_V_ABI
 https://wiki.osdev.org/Calling_Conventions
 https://stackoverflow.com/questions/2535989/what-are-the-calling-conventions-for-unix-linux-system-calls-and-user-space-f
 https://stackoverflow.com/questions/27460874/using-registers-to-specify-memory-to-read-with-lldb
+https://godbolt.org/
+https://stackoverflow.com/questions/62046052/how-to-change-errno-value-in-asm-x64
+https://stackoverflow.com/questions/52126328/cant-call-c-standard-library-function-on-64-bit-linux-from-assembly-yasm-code //problème de comp pour errno

@@ -1,4 +1,3 @@
-
 section .text
 global ft_strcmp
 ;rdi char* s1, pointer to a null terminated string
