@@ -4,7 +4,7 @@ section .text
 ;rsi void* buff
 ;rdx size_t count
 global ft_read:
-	push rbx
+	push rbx;on sauvegarde le registre
 	push rbp;on setup la stack
 	mov rbp, rsp
 

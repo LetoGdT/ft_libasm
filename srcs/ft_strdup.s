@@ -32,6 +32,6 @@ _loop:
 	jne _loop
 	mov rax, res;on récup le pointeur de résultat
 _finish:
-	add rsp, stack_size
-	pop rbp
+	add rsp, stack_size;on supprime les variables locales de la stack
+	pop rbp; on sort de la stack frame
 	ret
