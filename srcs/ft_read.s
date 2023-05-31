@@ -1,15 +1,12 @@
 extern __errno_location
 section .text
-global ft_write
 ;rdi int fd
-;rsi const void * buff
-;rdx size_t count size_t
-;return on rax: size_t number of bytes written or -1 in case of error
-;sets errno if an error is detected
-ft_write:
-	push rbx;on sauvegarde le registre
-	push rbp
-	mov rbp, rsp;on setup la stack
+;rsi void* buff
+;rdx size_t count
+global ft_read:
+	push rbx
+	push rbp;on setup la stack
+	mov rbp, rsp
 
 	;syscall setup
 	;rax: syscall number
@@ -18,7 +15,7 @@ ft_write:
 	;rdx: third param
 	;r8: fourth param
 	;r9: fifth param
-	mov rax, 1
+	mov rax, 0
 	mov rbx, rdi
 	mov rcx, rsi
 	;mov rdx, rdx

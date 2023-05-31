@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <fcntl.h>
+#include <unistd.h>
 #include <errno.h>
 #include "libasm.h"
 
@@ -28,5 +29,7 @@ int main(int argc, char** argv) {
 	printf("writing in erroneous fd: %ld\n", ft_write(-1, "pouet\n", 6));
 	printf("errno: %d strerror: %s\n", errno, strerror(errno));
 	close(fd);
+	printf("%ld\n", sizeof(int));
+	printf("%s\n", ft_strdup("allo"));
 	return 0;
 }

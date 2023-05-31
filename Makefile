@@ -3,7 +3,8 @@ TEST 		:=  test
 SRCS		:=	srcs/ft_strlen.s\
 				srcs/ft_strcpy.s\
 				srcs/ft_strcmp.s\
-				srcs/ft_write.s
+				srcs/ft_write.s\
+				srcs/ft_strdup.s
 HEADERS 	:= 	libasm.h
 TEST_SRCS 	:=  main.c
 OBJS		:=	$(addprefix objs/,$(notdir $(patsubst %.s,%.o,$(SRCS))))
