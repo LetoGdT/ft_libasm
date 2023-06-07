@@ -1,9 +1,10 @@
 extern __errno_location
+global ft_read
 section .text
 ;rdi int fd
 ;rsi void* buff
 ;rdx size_t count
-global ft_read:
+ft_read:
 	push rbx;on sauvegarde le registre
 	push rbp;on setup la stack
 	mov rbp, rsp
